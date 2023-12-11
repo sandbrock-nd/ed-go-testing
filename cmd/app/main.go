@@ -1,17 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // Factorial calculates the factorial of a given number.
-// This function contains a bug that causes it to fail for certain inputs.
 func Factorial(n int) (int, error) {
-	if n == 0 {
-		return 1, nil
+	if n < 0 {
+		return 0, errors.New("negative input is not allowed")
 	}
 
-	// Bug: This condition incorrectly handles negative inputs.
-	if n < 0 {
-		return -1, nil
+	if n == 0 {
+		return 1, nil
 	}
 
 	result := 1
