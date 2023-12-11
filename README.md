@@ -32,5 +32,6 @@ As you can see, it is not handling negative values correctly. While this logical
 1. Write a test that passes in a positive value to the Factorial function.
 2. Write a test that passes in a zero value to the Factorial function.
 3. Write a test that passes in a negative value to the Factorial function.
+4. Update the Factorial function so that all tests pass.
 
 
