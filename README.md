@@ -1,7 +1,27 @@
 # ed-go-testing
 Unit testing tutorial for Go
 
-# Instructions
+# Writing unit tests
+To write unit tests in go:
+1. Create a file in the same directory as the file you want to test. It should have the same name as the file you want to test, along with the _test.go suffix.
+2. Add an `import "testing"` statement after the `package` statement.
+3. Create a function that accepts a single argument: `t *testing.T`. For example, the following file is called <strong>main_test.go</strong> and resides in the <strong>./cmd/app</strong> directory:
+``` go
+package main
+
+import "testing"
+
+func TestItem(t *testing.T) {
+  result := testSomething(5)
+  if (result != 5) {
+    t.Errorf("Result is %d; want 5", result)
+  }
+}
+```
+
+# Challenge Instructions
+Clone this repository locally.
+
 This program calculates factorials. It has a bug in it. Running the program gives the following output:
 
 Factorial of 5: 120
